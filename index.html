@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinz0 Hub</title>
+    <title>Sinz0 Hub🚀</title>
     <style>
         :root {
             --icon: "https://th.bing.com/th/id/OIP.5yCULdUQwsFI031B02O0IAHaHX?cb=iwp2&rs=1&pid=ImgDetMain";
-            --primary: #7289da;
+            --primary: #880cee;
             --primary-dark: #5a6fbb;
             --secondary: #36393f;
             --dark: #2f3136;
             --darker: #202225;
             --light: #f6f6f7;
-            --accent: #43b581;
+            --accent: #6705b8;
             --danger: #f04747;
             --warning: #faa61a;
             --text: #dcddde;
@@ -437,9 +437,20 @@
             margin-bottom: 50px;
             position: relative;
             display: inline-block;
+            left: 16.5%;
+            transform: translateX(-50%);
+        }
+
+        .section-title-discord {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
             left: 50%;
             transform: translateX(-50%);
         }
+
 
         .wave-text {
             background: linear-gradient(135deg, var(--primary), var(--accent));
@@ -758,7 +769,7 @@
 
         @keyframes typing {
             from {
-                width: 0;
+                width: 0.0%;
             }
             to {
                 width: 100%;
@@ -1151,22 +1162,32 @@
             gap: 15px;
         }
 
-        .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--secondary);
-            color: var(--text);
-            transition: all 0.3s ease;
-        }
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url('https://cdn.corenexis.com/i/mm/ma22/ulIdvI.png?token=a3399936f81544f3f9d4577978126410') no-repeat center center;
+    background-size: cover;
+    color: white; 
+    transition: all 0.3s ease;
+}
 
-        .footer-social a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url('https://cdn.corenexis.com/i/mm/ma23/hy8DAl.gif?token=5b7a31f98c249794bf34be87b9453476') no-repeat center center;
+    background-size: cover;
+    color: white;
+    transition: all 0.3s ease;
+}
+
 
         .footer-bottom {
             text-align: center;
@@ -1234,7 +1255,8 @@
             <div class="box"></div>
             <div class="box"></div>
         </div>
-        <h2 class="loading-text">Loading Sinz0 Hub...</h2>
+        <h2 class="loading-text">🚀Loading Sinz0 Hub🚀...</h2>
+        
     </div>
 
     <div class="container">
@@ -1256,7 +1278,7 @@
             <section class="tab-content active" id="home">
                 <div class="hero">
                     <h2 class="hero-title slide-in">Welcome to <span class="highlight">Sinz0 Hub</span></h2>
-                    <p class="hero-subtitle fade-in">100% free Grow a Garden Account Generater Bot!!</p>
+                    <p class="hero-subtitle fade-in">100% free game account Generater Bot!!</p>
                     <div class="cta-buttons">
                         <button class="btn btn-primary pulse-on-hover">Get Started</button>
                         <button class="btn btn-secondary shake-on-hover">Join Discord</button>
@@ -1353,7 +1375,7 @@
             <section class="tab-content" id="discord">
                 <div class="discord-container">
                     <div class="discord-left">
-                        <h2 class="section-title typewriter">Join Our Discord Community</h2>
+                        <h2 class="section-title-discord typewriter">join Our discord Community</h2>
                         <p class="discord-desc">Join our growing Discord community to get access to exclusive content, support, and the latest updates.</p>
                         
                         <div class="discord-features">
@@ -1539,43 +1561,36 @@
                 }, 500);
             }, 2000);
 
-            // Tab switching
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
-                    // Remove active class from all links and tabs
+                
                     navLinks.forEach(l => l.classList.remove('active'));
                     document.querySelectorAll('.tab-content').forEach(tab => {
                         tab.classList.remove('active');
                     });
                     
-                    // Add active class to clicked link and corresponding tab
                     this.classList.add('active');
                     const tabId = this.getAttribute('data-tab');
                     document.getElementById(tabId).classList.add('active');
                 });
             });
 
-            // Feature tabs
             const featureTabs = document.querySelectorAll('.feature-tab');
             featureTabs.forEach(tab => {
                 tab.addEventListener('click', function() {
-                    // Remove active class from all tabs and panels
                     featureTabs.forEach(t => t.classList.remove('active'));
                     document.querySelectorAll('.feature-panel').forEach(panel => {
                         panel.classList.remove('active');
                     });
                     
-                    // Add active class to clicked tab and corresponding panel
                     this.classList.add('active');
                     const featureId = this.getAttribute('data-feature');
                     document.getElementById(featureId).classList.add('active');
                 });
             });
 
-            // Counter animation
             function startCounters() {
                 const counters = document.querySelectorAll('.counter');
                 const speed = 200;
@@ -1593,21 +1608,15 @@
                     }
                 });
             }
-
-            // Discord button functionality
             const discordBtn = document.querySelector('.btn-discord');
             if (discordBtn) {
                 discordBtn.addEventListener('click', function() {
-                    // Replace with your actual Discord invite link
                     window.open('https://discord.gg/Pqn4tZ2XKT', '_blank');
                 });
             }
-
-            // Secondary Discord button functionality
             const secondaryDiscordBtn = document.querySelector('.btn-secondary');
             if (secondaryDiscordBtn) {
                 secondaryDiscordBtn.addEventListener('click', function() {
-                    // Replace with your actual Discord invite link
                     window.open('https://discord.gg/Pqn4tZ2XKT', '_blank');
                 });
             }
